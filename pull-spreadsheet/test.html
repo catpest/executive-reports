@@ -120,7 +120,8 @@
           var range = response.result;
           $data = range.values
           if (range.values.length > 0) {
-            //appendPre('Data found.');
+            appendPre('Data found.');
+            appendPre($data);
             // Creates a new instance of the Github object exposed by Github.js
           var github = new Github({
             username: 'nkoroi',
