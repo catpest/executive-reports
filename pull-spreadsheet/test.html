@@ -120,18 +120,22 @@
           var range = response.result;
           $data = range.values
           if (range.values.length > 0) {
+            appendPre('Data found.');
             // Creates a new instance of the Github object exposed by Github.js
           var github = new Github({
             username: 'nkoroi',
             password: '15omega20.',
             auth: 'basic'
           });
+            appendPre('Authed.');
 
           // Creates an object representing the repository you want to work with
+            appendPre('...');
           var repository = github.getRepo('catpest', 'executive-reports');
 
           // Creates a new file (or updates it if the file already exists)
           // with the content provided
+            appendPre('Writing.');
           repository.write(
              'master', // e.g. 'master'
              '_data/analysis.txt', // e.g. 'blog/index.md'
