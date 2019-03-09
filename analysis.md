@@ -3,7 +3,6 @@ layout : default
 title : Analysis
 ---
 <table>
-
 <thead>
 <tr class="header">
 <th>Month</th>
