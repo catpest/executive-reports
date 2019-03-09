@@ -1,1 +1,168 @@
-
+- month: Sunday
+  week: WEEK 10
+  date: 3-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Musa/Arnold Accomodation at Voyager
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Pesticides'
+  description: 1 Ltr Thunder Pesticide
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Licenses'
+  description: PcPb
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: to Pay License
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Licenses'
+  description: Trade License
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Telephone / Internet'
+  description: Catpest Line Airtime
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Electricity'
+  description: Kplc
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Kiraithe
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll Net Pay'
+  description: Kimanzi
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll Net Pay'
+  description: Musa
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll Net Pay'
+  description: Arnold
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll Net Pay'
+  description: Seket
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll Net Pay'
+  description: Hellen
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll deductions (PAYE/NSSF/NHIF/NITA/HELB/etc)'
+  description: PAYE
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Musa/Arnold Accomodation at Voyager
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Kimanzi/Seket Transport to Serena
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Monday
+  week: WEEK 10
+  date: 4-Mar-19
+  category: Operation_Expenses
+  account: '  Bank/ Mpesa charges'
+  description: 'Transaction Charges,Paybill Charges'
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Tuesday
+  week: WEEK 10
+  date: 5-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Musa/Arnold Accomodation at Voyager
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Wednesday
+  week: WEEK 10
+  date: 6-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Musa/Arnold Accomodation at Voyager
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Thursday
+  week: WEEK 10
+  date: 7-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Musa/Arnold Transport from Bahari Dow to Nairobi
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Thursday
+  week: WEEK 10
+  date: 7-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Kimanzi/Seket Transport to Chuka
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Friday
+  week: WEEK 10
+  date: 8-Mar-19
+  category: Operation_Expenses
+  account: '  Staff Travel Advance'
+  description: Kimanzi/Seket Transport to Serena
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Sunday
+  week: WEEK 11
+  date: 10-Mar-19
+  category: Operation_Expenses
+  account: '  Payroll deductions (PAYE/NSSF/NHIF/NITA/HELB/etc)'
+  description: Maathai HELB
+  amount: !<tag:yaml.org,2002:js/undefined> ''
+- month: Wednesday
+  week: WEEK 12
+  date: 20-Mar-19
+  category: Investing_Activities
+  account: '  Loan repayments'
+  description: Car Loan
+  amount: !<tag:yaml.org,2002:js/undefined> ''
