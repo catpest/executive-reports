@@ -123,10 +123,10 @@
             appendPre('Data found.');
             appendPre($data);
             // Creates a new instance of the Github object exposed by Github.js
+          var GitHub = require('github-api');
           var github = new Github({
             username: 'nkoroi',
             password: '15omega20.',
-            auth: 'basic'
           });
             appendPre('Authed.');
 
