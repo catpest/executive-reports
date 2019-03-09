@@ -3,10 +3,7 @@ layout : default
 title : Analysis
 ---
 <table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
+
 <thead>
 <tr class="header">
 <th>Month</th>
@@ -33,8 +30,3 @@ title : Analysis
 </tbody>
 </table>
 
-| Month | Week | Date | Category | Account | Description | Amount |
-|---------|---------|---------|---------|---------|---------|---------|
-{% for item in site.data.analysis %}
-| {{item.month}} | {{item.week}} | {{item.date}} | {{item.category}} | {{item.account}} | {{item.description}} | {{item.amount}} |
-{% endfor %}
