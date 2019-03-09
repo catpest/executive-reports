@@ -3,6 +3,7 @@
   <head>
     <title>Google Sheets API Quickstart</title>
     <meta charset="utf-8" />
+    <script type="text/javascript" src="/assets/js/github.js"></script>
   </head>
   <body>
     <p>Google Sheets API Quickstart</p>
@@ -105,16 +106,31 @@
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1rYwEtcScjWEf6vwOVfiY1CyZKde77EaURN_hchuVGg4',
-          range: 'Class Data!A2:E',
+          spreadsheetId: '10_5iKMF8Vx2D41tSnSBECCm1mQu-hY8XpaFFEVO67Gg',
+          range: 'Analysis',
         }).then(function(response) {
           var range = response.result;
+          $data = range.values
           if (range.values.length > 0) {
-            appendPre('Name, Major:');
-            for (i = 0; i < range.values.length; i++) {
-              var row = range.values[i];
-              // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0] + ', ' + row[4]);
+            // Creates a new instance of the Github object exposed by Github.js
+          var github = new Github({
+            username: 'nkoroi',
+            password: '15omega20.',
+            auth: 'basic'
+          });
+
+          // Creates an object representing the repository you want to work with
+          var repository = github.getRepo('catpest', 'executive-reports');
+
+          // Creates a new file (or updates it if the file already exists)
+          // with the content provided
+          repository.write(
+             'master', // e.g. 'master'
+             '_data/analysis.txt', // e.g. 'blog/index.md'
+             $data, // e.g. 'Hello world, this is my new content'
+             'Updated Analysis Data', // e.g. 'Created new index'
+             function(err) {}
+          );
             }
           } else {
             appendPre('No data found.');
