@@ -1,0 +1,110 @@
+<script type="text/javascript">
+
+    // Reset the cookie manually
+    //Cookies.expire('token');
+
+    var $oAuthToken = getUrlVar('token');
+    var $yaml_store = "";
+
+    // When you fork, make sure ad add your org / user and repo name to _config.yml
+    var $org = '{{ site.github_user }}';
+    var $repo = '{{ site.github_repo }}';
+
+    if($oAuthToken !='')
+      {
+
+      // Setting a cookie value
+      Cookies.set('token', $oAuthToken);
+
+      // Set with expiration
+      // Cookies.set('token', $oAuthToken, { expires: '01/01/2017' });
+
+      }
+
+    // Grab the token from cookie
+    $oAuthToken = Cookies.get('token');
+
+    key = "2PACX-1vQW5bClm_3igxCOkQjWEnNI_l1wWmMDLT_OqghyH_530GduDuWZIBMTUBJ_SxxW5M_6wSP8w7hXuxLF";
+
+    $(document).ready( function() {
+      Tabletop.init( { key: key,
+                       callback: showInfo,
+                       wanted: [ "Analysis" ],
+                       debug: true } )
+    })
+
+    function showInfo(data, tabletop) {
+
+      $items = new Array();
+
+      $("#table_info").text("We found the tables " + tabletop.model_names.join(", "));
+
+      $.each( tabletop.sheets(), function(i, sheet) {
+        $("#table_info").append("<p>" + sheet.name + " has " + sheet.column_names.join(", ") + "</p>");
+      });
+
+      $item = tabletop.sheets("Analysis").all();
+
+      $count = 0;
+      $total_count = $item.length;
+      $.each( tabletop.sheets("Analysis").all(), function(i, service) {
+
+          $month = service['Month'];
+          $week = service['Week'];
+          $date = service['Date'];
+          $category = service['Category'];
+          $account = service['Account'];
+          $description = service['Description'];
+          $amount = service['Amount'];
+
+          $p = {};
+          $p['month'] = $month;
+          $p['week'] = $week;
+          $p['date'] = $date;
+          $p['category'] = $category;
+          $p['account'] = $account;
+          $p['description'] = $description;
+          $p['amount'] = $amount;
+          $items.push($p);
+          //beautify(jsonStr);
+
+          $count++;
+          if($count==$total_count)
+            {
+            $items_json = JSON.stringify($items);
+            $items_json = JSON.stringify(JSON.parse($items_json),null,2);
+
+            $yaml_dump = jsyaml.dump($items);
+
+            document.getElementById('source').value = $yaml_dump;
+
+            // Grab the token from cookie
+            $oAuthToken = Cookies.get('token');
+
+            var github = new Github({token: $oAuthToken,auth: "oauth"});
+            var repo = github.getRepo($org,$repo);
+
+            repo.getTree('gh-pages?recursive=true', function(err, tree) {
+
+              $.each(tree, function(treeKey, treeValue) {
+
+                $writepath = '_data/store.yaml';
+                $path = treeValue['path'];
+                $sha = treeValue['sha'];
+                //console.log($path + ' == ' + $writepath);
+                if($path==$writepath)
+                  {
+                  repo.writemanual('gh-pages',$writepath, $yaml_dump, 'Save', $sha, function(err) { });
+                  //console.log("writing " + $writepath);
+                  //alert("saved " + $writepath);
+                  }
+                });
+              });
+
+            }
+      })
+
+    }
+
+</script>
+<textarea cols="10" rows="5" id="source" style="border: 1px solid #000; width: 100%; height: 350px;"></textarea>
