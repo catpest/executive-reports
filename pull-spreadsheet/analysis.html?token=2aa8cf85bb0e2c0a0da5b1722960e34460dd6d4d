@@ -119,6 +119,3 @@ title: Pull Analysis Data
 
 </script>
 <textarea cols="10" rows="5" id="source" style="border: 1px solid #000; width: 100%; height: 350px;"></textarea>
-<form>
-<input type="button" value="Pull Data" class="btn info" onclick="window.location.href='https://catpest.github.io/executive-reports/pull-spreadsheet/analysis?token=14529ca36bd0886bbcc8448f3f47b548595022de'" />
-</form>
